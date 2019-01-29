@@ -1,5 +1,9 @@
 package geek.mcwasteland;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import geek.mcwasteland.proxy.Proxy;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -75,8 +79,8 @@ public final class MCWasteland {
 	 *
  	 */
 	@SidedProxy(
-				clientSide = "com.mcmoddev.examplemod.proxy.ClientProxy",
-				serverSide = "com.mcmoddev.examplemod.proxy.ServerProxy")
+				clientSide = "geek.mcwasteland.proxy.ClientProxy",
+				serverSide = "geek.mcwasteland.proxy.ServerProxy")
 	private static Proxy proxy = null;
 
 	/**

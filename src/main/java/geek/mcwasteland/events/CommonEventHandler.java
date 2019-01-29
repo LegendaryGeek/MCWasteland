@@ -1,9 +1,9 @@
 package geek.mcwasteland.events;
 
 import geek.mcwasteland.MCWasteland;
-import geek.mcwasteland.block.ExampleBlock;
+import geek.mcwasteland.block.Terminal;
 import geek.mcwasteland.init.MCWastelandBlocks;
-import geek.mcwasteland.init.ExampleModFluids;
+import geek.mcwasteland.init.MCWastelandFluids;
 import geek.mcwasteland.item.ExampleItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -58,9 +58,9 @@ public final class CommonEventHandler {
 	 */
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
-		event.getRegistry().register(setupBlock(new ExampleBlock(), "example_block"));
+		event.getRegistry().register(setupBlock(new Terminal(), "terminal"));
 		event.getRegistry().register(setupBlock(
-				new BlockFluidClassic(ExampleModFluids.EXAMPLE_FLUID, Material.LAVA), "example_fluid"));
+				new BlockFluidClassic(MCWastelandFluids.EXAMPLE_FLUID, Material.LAVA), "example_fluid"));
 	}
 
 	/**
@@ -69,7 +69,7 @@ public final class CommonEventHandler {
 	 */
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
-		event.getRegistry().register(setupItemBlock(MCWastelandBlocks.EXAMPLE_BLOCK));
+		event.getRegistry().register(setupItemBlock(MCWastelandBlocks.Terminal));
 		event.getRegistry().register(setupItemBlock(MCWastelandBlocks.EXAMPLE_FLUID));
 		event.getRegistry().register(setupItem(new ExampleItem(), "example_item"));
 	}
@@ -91,7 +91,7 @@ public final class CommonEventHandler {
 	 */
 	private static Block setupBlock(final Block block, final String name) {
 		block.setRegistryName(name);
-		block.setTranslationKey(ExampleMod.MODID + "." + name);
+		block.setTranslationKey(MCWasteland.MODID + "." + name);
 
 		return block;
 	}
@@ -117,7 +117,7 @@ public final class CommonEventHandler {
 	 */
 	private static Item setupItem(final Item item, final String name) {
 		item.setRegistryName(name);
-		item.setTranslationKey(ExampleMod.MODID + "." + name);
+		item.setTranslationKey(MCWasteland.MODID + "." + name);
 
 		return item;
 	}

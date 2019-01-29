@@ -1,5 +1,13 @@
 package geek.mcwasteland.item;
 
-public class ExampleItem {
+import net.minecraft.item.Item;
 
+public class ExampleItem extends Item{
+
+	/**
+	 *
+	 */
+	public ExampleItem() {
+		super();
+	}
 }
