@@ -4,7 +4,7 @@ import geek.mcwasteland.MCWasteland;
 import geek.mcwasteland.block.Terminal;
 import geek.mcwasteland.init.MCWastelandBlocks;
 import geek.mcwasteland.init.MCWastelandFluids;
-import geek.mcwasteland.item.ExampleItem;
+import geek.mcwasteland.item.Stimpack;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -59,8 +59,8 @@ public final class CommonEventHandler {
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 		event.getRegistry().register(setupBlock(new Terminal(), "terminal"));
-		event.getRegistry().register(setupBlock(
-				new BlockFluidClassic(MCWastelandFluids.EXAMPLE_FLUID, Material.LAVA), "example_fluid"));
+	//	event.getRegistry().register(setupBlock(
+	//			new BlockFluidClassic(MCWastelandFluids.EXAMPLE_FLUID, Material.LAVA), "example_fluid"));
 	}
 
 	/**
@@ -70,8 +70,8 @@ public final class CommonEventHandler {
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
 		event.getRegistry().register(setupItemBlock(MCWastelandBlocks.Terminal));
-		event.getRegistry().register(setupItemBlock(MCWastelandBlocks.EXAMPLE_FLUID));
-		event.getRegistry().register(setupItem(new ExampleItem(), "example_item"));
+		//event.getRegistry().register(setupItemBlock(MCWastelandBlocks.EXAMPLE_FLUID));
+		event.getRegistry().register(setupItem(new Stimpack(), "example_item"));
 	}
 
 	/**

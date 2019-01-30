@@ -1,6 +1,7 @@
 package geek.mcwasteland.init;
 
 import net.minecraft.block.Block;
+import geek.mcwasteland.block.*;
 
 public class MCWastelandBlocks {
 
@@ -15,7 +16,7 @@ public class MCWastelandBlocks {
 	/**
 	 *
  	 */
-	public static final Block Terminal = null;
+	public static final Block Terminal = new Terminal();
 	
 
 	/**

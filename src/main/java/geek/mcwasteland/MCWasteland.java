@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import geek.mcwasteland.proxy.Proxy;
+import geek.mcwasteland.util.GeekTab;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -21,19 +22,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 	name = MCWasteland.NAME,
 	version = MCWasteland.VERSION,
 	dependencies = "required-after:forge@[14.23.4.2705,)",
-	useMetadata = false,
-	clientSideOnly = false,
-	serverSideOnly = false,
 	acceptedMinecraftVersions = "[1.12.2]",
-	acceptableRemoteVersions = MCWasteland.VERSION,
-	acceptableSaveVersions = "",
-	certificateFingerprint = "@FINGERPRINT@",
-	modLanguage = "java",
-	modLanguageAdapter = "",
-	canBeDeactivated = false,
-	guiFactory = "",
-	updateJSON = "https://github.com/MinecraftModDevelopmentMods/ExampleMod/master/update.json",
-	customProperties = {})
+	acceptableRemoteVersions = MCWasteland.VERSION)
 public final class MCWasteland {
 
 	/* The Mod's Instance. */
@@ -41,10 +31,10 @@ public final class MCWasteland {
 	//private static ExampleMod instance = null
 
 	/** ID of this Mod. */
-	public static final String MODID = "examplemod";
+	public static final String MODID = "mcwasteland";
 
 	/** Display name of this Mod. */
-	public static final String NAME = "Example Mod";
+	public static final String NAME = "";
 
 	/** Version of this Mod. */
 	public static final String VERSION = "1.0.0";
@@ -111,6 +101,7 @@ public final class MCWasteland {
 	@Mod.EventHandler
 	public static void init(final FMLInitializationEvent event) {
 		proxy.init(event);
+		GeekTab.init();
 	}
 
 	/**
