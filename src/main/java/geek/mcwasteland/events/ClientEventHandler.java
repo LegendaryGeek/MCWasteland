@@ -1,10 +1,9 @@
 package geek.mcwasteland.events;
 
 import geek.mcwasteland.MCWasteland;
+import geek.mcwasteland.fluids.FluidStateMapper;
 import geek.mcwasteland.init.MCWastelandBlocks;
-import geek.mcwasteland.init.MCWastelandFluids;
 import geek.mcwasteland.init.MCWastelandItems;
-import geek.mcwasteland.
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -21,7 +20,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 /**
  *
  */
-@Mod.EventBusSubscriber(value = Side.CLIENT, modid = MCWastelandWeapons.MODID)
+@Mod.EventBusSubscriber(value = Side.CLIENT, modid = MCWasteland.MODID)
 public final class ClientEventHandler {
 
 	/**

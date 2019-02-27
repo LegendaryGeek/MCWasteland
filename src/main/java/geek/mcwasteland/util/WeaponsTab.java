@@ -1,25 +1,23 @@
 package geek.mcwasteland.util;
 
 
-import geek.mcwasteland.MCWasteland;
 import geek.mcwasteland.init.MCWastelandItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class GeekTab extends CreativeTabs {
+public class WeaponsTab extends CreativeTabs {
 
-	public static GeekTab instance = null;
-	public GeekTab() {
-		super(MCWasteland.MODID);
+	public static WeaponsTab instance = null;
+	public WeaponsTab() {
+		super("MCWasteland Weapons");
 		
-		// TODO Auto-generated constructor stub
 	}
 	
 	public static void init()
 	{
-		instance = new GeekTab();
+		instance = new WeaponsTab();
 	}
 	@Override
 	@SideOnly(Side.CLIENT)

@@ -4,7 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import geek.mcwasteland.proxy.Proxy;
-import geek.mcwasteland.util.GeekTab;
+import geek.mcwasteland.util.WeaponsTab;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -101,7 +101,7 @@ public final class MCWasteland {
 	@Mod.EventHandler
 	public static void init(final FMLInitializationEvent event) {
 		proxy.init(event);
-		GeekTab.init();
+		WeaponsTab.init();
 	}
 
 	/**
