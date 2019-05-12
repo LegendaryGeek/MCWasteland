@@ -27,5 +27,4 @@ public class Pistol10mm extends Item {
 	return null;
  }
 
-
 }
